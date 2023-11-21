@@ -1,0 +1,10 @@
+chaine = "abcdefghijklmnopqrstuvwxyz" * 10
+
+longueur_chaine = len(chaine)
+ligne = 1
+caractere_affiche = 0
+
+while caractere_affiche < longueur_chaine:
+    print(chaine[caractere_affiche:caractere_affiche + ligne].center(50))
+    caractere_affiche += ligne
+    ligne += 2

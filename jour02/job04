@@ -1,0 +1,5 @@
+for multiplicateur in range(1, 7):
+    print(f"\nTable de multiplication par {multiplicateur}:")
+    for nombre in range(1, 11):
+        resultat = multiplicateur * nombre
+        print(f"{multiplicateur} x {nombre} = {resultat}")

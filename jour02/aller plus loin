@@ -1,0 +1,23 @@
+a = float(input("Entrez la longueur a : "))
+b = float(input("Entrez la longueur b : "))
+c = float(input("Entrez la longueur c : "))
+
+
+if a + b > c and b + c > a and a + c > b:
+    print("Ces longueurs peuvent former un triangle.")
+
+   
+    if a == b == c:
+        print("Il s'agit d'un triangle équilatéral.")
+    elif a == b or b == c or a == c:
+        print("Il s'agit d'un triangle isocèle.")
+        
+       
+        if a**2 + b**2 == c**2 or b**2 + c**2 == a**2 or a**2 + c**2 == b**2:
+            print("De plus, il est rectangle.")
+    elif a**2 + b**2 == c**2 or b**2 + c**2 == a**2 or a**2 + c**2 == b**2:
+        print("Il s'agit d'un triangle rectangle.")
+    else:
+        print("Il s'agit d'un triangle quelconque.")
+else:
+    print("Ces longueurs ne peuvent pas former un triangle.")
