@@ -1,0 +1,12 @@
+def Add(a, b):
+    somme = a + b
+    
+    
+    print(f"La somme de {a} et {b} est : {somme}")
+
+
+Add(5, 3)
+Add(10, 20)
+Add(2, 8)
+Add(15, 7)
+

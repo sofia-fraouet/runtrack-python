@@ -1,0 +1,32 @@
+def calcule(num1, operator, num2):
+    if operator == '+':
+        return num1 + num2
+    elif operator == '-':
+        return num1 - num2
+    elif operator == '*':
+        return num1 * num2
+    elif operator == '/':
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Division par zéro impossible"
+    elif operator == '%':
+        if num2 != 0:
+            return num1 % num2
+        else:
+            return "Modulo par zéro impossible"
+    else:
+        return "Opérateur non valide"
+
+
+resultat_addition = calcule(5, '+', 3)
+resultat_soustraction = calcule(8, '-', 2)
+resultat_multiplication = calcule(4, '*', 6)
+resultat_division = calcule(10, '/', 2)
+resultat_modulo = calcule(7, '%', 3)
+
+print(resultat_addition)        
+print(resultat_soustraction)    
+print(resultat_multiplication)   
+print(resultat_division)        
+print(resultat_modulo)          

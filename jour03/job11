@@ -1,0 +1,19 @@
+def time_to_text(minutes):
+    if minutes < 0:
+        print("Veuillez entrer un nombre positif de minutes.")
+        return
+    
+    heures = minutes // 60
+    minutes_restantes = minutes % 60
+
+    if heures == 0:
+        temps_en_texte = f"{minutes_restantes} minutes"
+    elif heures == 1:
+        temps_en_texte = f"{heures} heure et {minutes_restantes} minutes"
+    else:
+        temps_en_texte = f"{heures} heures et {minutes_restantes} minutes"
+
+    print(temps_en_texte)
+
+# Exemple d'utilisation
+time_to_text(90)

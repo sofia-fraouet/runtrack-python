@@ -1,0 +1,8 @@
+
+def My_print_name (name) : 
+    print ("Le prenom est :" , name )
+My_print_name ("Kemila")
+My_print_name ("Kamelia")
+My_print_name ("Camille")
+
+

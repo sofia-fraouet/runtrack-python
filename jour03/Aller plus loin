@@ -1,0 +1,9 @@
+def inverser_chaine(chaine):
+    return chaine[::-1]
+
+# Exemple d'utilisation
+chaine_originale = "nikana"
+chaine_inverse = inverser_chaine(chaine_originale)
+
+print(f"Chaine originale : {chaine_originale}")
+print(f"Chaine inversée : {chaine_inverse}")

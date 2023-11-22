@@ -1,0 +1,14 @@
+def verifier_signe(nombre):
+    if nombre > 0:
+        print("positif")
+    elif nombre < 0:
+        print("negatif")
+    else:
+        print("nul")
+
+
+verifier_signe(9)  
+verifier_signe(-9)  
+verifier_signe(0)  
+verifier_signe(30)  
+verifier_signe(-10)  
