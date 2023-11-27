@@ -1,0 +1,11 @@
+# Créer la liste d'entiers
+L = [7, 11, 42, 39, 2]
+
+# Afficher la liste originale
+print("Liste originale :", L)
+
+# Augmenter chaque élément de 1
+L = [x + 1 for x in L]
+
+# Afficher la liste modifiée
+print("Liste modifiée :", L)

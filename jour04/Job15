@@ -1,0 +1,25 @@
+# Fonction pour arrondir un nombre à la décimale la plus proche
+def arrondir_nombre(nombre):
+    partie_entiere = int(nombre)
+    partie_fractionnaire = nombre - partie_entiere
+
+    if partie_fractionnaire >= 0.5:
+        return partie_entiere + 1
+    else:
+        return partie_entiere
+
+# Liste initiale
+liste_nombres = [22.4, 4.0, 16.22, 9.10, 11.00, 12.22, 14.20, 5.20, 17.50]
+
+# Arrondir chaque nombre dans la liste
+liste_arrondie = [arrondir_nombre(nombre) for nombre in liste_nombres]
+
+# Tri manuel de la liste
+for i in range(len(liste_arrondie)):
+    for j in range(i + 1, len(liste_arrondie)):
+        if liste_arrondie[i] > liste_arrondie[j]:
+            # Échange des éléments si ils ne sont pas dans l'ordre croissant
+            liste_arrondie[i], liste_arrondie[j] = liste_arrondie[j], liste_arrondie[i]
+
+# Afficher la liste arrondie et triée
+print("Liste arrondie et triée :", liste_arrondie)

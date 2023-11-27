@@ -1,0 +1,15 @@
+def ajouter_mangue():
+    fruits = ["pomme", "cerise", "orange", "Melon"]
+    
+    # Vérifier si l'index 2 est valide
+    if len(fruits) >= 3:
+        # Ajouter "Mangue" à l'index 2
+        fruits.insert(2, "Mangue")
+        
+        # Afficher la liste mise à jour
+        print("Liste de fruits après l'ajout de Mangue à l'index 2 :", fruits)
+    else:
+        print("La liste ne contient pas assez d'éléments pour ajouter à l'index 2.")
+
+# Utilisation de la fonction
+ajouter_mangue()

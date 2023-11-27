@@ -1,0 +1,13 @@
+# Liste initiale
+L = [8, 24, 27, 48, 2, 16, 9, 102, 7, 84, 91]
+
+# Filtrer les éléments dans l'intervalle [25, 90]
+valeurs_intervalle = [x for x in L if 25 <= x <= 90]
+
+# Calculer le produit des valeurs dans l'intervalle
+produit = 1
+for valeur in valeurs_intervalle:
+    produit *= valeur
+
+# Afficher le résultat
+print("Le produit des valeurs dans l'intervalle [25, 90] est :", produit)

@@ -1,0 +1,11 @@
+def ajouter_melon():
+    fruits = ["pomme", "cerise", "orange"]
+    
+    # Ajouter "Melon" à la fin de la liste
+    fruits.append("Melon")
+    
+    # Afficher la liste mise à jour
+    print("Liste de fruits après l'ajout de Melon :", fruits)
+
+# Utilisation de la fonction
+ajouter_melon()

@@ -1,0 +1,29 @@
+def remplacer_element_par_somme(liste, index):
+    # Vérifier si l'index est valide
+    if 0 <= index < len(liste):
+        # Vérifier si les indices voisins existent
+        if 0 <= index - 1 < len(liste) and 0 <= index + 1 < len(liste):
+            # Calculer la somme des cases voisines
+            somme_voisins = liste[index - 1] + liste[index + 1]
+            
+            # Remplacer l'élément à l'index par la somme des voisins
+            liste[index] = somme_voisins
+        else:
+            print("Les indices voisins ne sont pas valides.")
+    else:
+        print("L'index spécifié n'est pas valide.")
+
+# Création de la liste
+L = [1, 2, 3, 4, 5]
+
+# Afficher la deuxième valeur de la liste
+print("Deuxième valeur de la liste :", L[1])
+
+# Appeler la fonction pour remplacer L[3] par la somme des voisins
+remplacer_element_par_somme(L, 3)
+
+# Afficher le tableau mis à jour
+print("Tableau après remplacement de L[3] par la somme des voisins :", L)
+
+# Afficher la dernière valeur de la liste
+print("Dernière valeur de la liste :", L[-1])

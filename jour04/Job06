@@ -1,0 +1,15 @@
+def echanger_premier_et_dernier(liste):
+    # Vérifier si la liste est non vide
+    if len(liste) > 0:
+        # Échanger les valeurs de la première et de la dernière case
+        liste[0], liste[-1] = liste[-1], liste[0]
+        print("Liste après échange de la première et de la dernière valeur :", liste)
+    else:
+        print("La liste est vide.")
+
+# Exemple d'utilisation avec une liste quelconque non vide
+ma_liste = [1, 2, 3, 4, 5]
+print("Liste initiale :", ma_liste)
+
+# Appeler la fonction pour échanger la première et la dernière valeur
+echanger_premier_et_dernier(ma_liste)

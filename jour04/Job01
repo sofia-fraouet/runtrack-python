@@ -1,0 +1,7 @@
+def obtenir_liste_fruits():
+    fruits = ["pomme", "cerise", "orange"]
+    return fruits
+
+# Utilisation de la fonction
+liste_de_fruits = obtenir_liste_fruits()
+print(liste_de_fruits)

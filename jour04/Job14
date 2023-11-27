@@ -1,0 +1,21 @@
+def my_long_word(longueur_min, phrase):
+    mots = ""
+    mot_actuel = ""
+    for caractere in phrase:
+        if caractere.isalnum():
+            mot_actuel += caractere
+        elif mot_actuel:
+            if len(mot_actuel) > longueur_min:
+                mots += mot_actuel + " "
+            mot_actuel = ""
+    if mot_actuel and len(mot_actuel) > longueur_min:
+        mots += mot_actuel
+    return mots
+
+# Exemple d'utilisation
+longueur_minimale = 3
+phrase_exemple = "La peur est le chemin vers le côté obscur, la peur mène à la colère, la colère mène à la haine, la haine mène à la souffrance"
+
+resultat = my_long_word(longueur_minimale, phrase_exemple)
+
+print("Output:", resultat)

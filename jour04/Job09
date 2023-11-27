@@ -1,0 +1,19 @@
+def statistiques_liste(liste):
+    # Vérifier si la liste est non vide
+    if len(liste) > 0:
+        valeur = liste[0]
+        maximum = max(liste)
+        minimum = min(liste)
+
+        # Afficher les résultats
+        print("Valeur de la liste :", valeur)
+        print("Maximum de la liste :", maximum)
+        print("Minimum de la liste :", minimum)
+    else:
+        print("La liste est vide.")
+
+# Liste donnée
+L = [8, 24, 27, 48, 2, 16, 9, 102, 7, 84, 91]
+
+# Appeler la fonction pour obtenir les statistiques de la liste
+statistiques_liste(L)
