@@ -1,0 +1,41 @@
+def my_sort(my_list):
+    """
+    Trie une liste en utilisant l'échange d'éléments adjacents.
+    
+    Arguments :
+    my_list -- La liste à trier.
+    
+    Retourne :
+    sorted_list -- La liste triée.
+    total_moves -- Le nombre total de coups nécessaires pour trier la liste.
+    """
+    # Initialisation des variables
+    total_moves = 0
+    sorted_list = my_list.copy()  # Pour ne pas modifier la liste d'origine
+    
+    # Flag pour indiquer si un échange a eu lieu lors du dernier passage
+    swapped = True
+    
+    # Boucle jusqu'à ce que la liste soit entièrement triée
+    while swapped:
+        swapped = False  # On suppose que la liste est triée à chaque début de boucle
+        for i in range(len(sorted_list) - 1):
+            # Comparaison des éléments adjacents
+            if sorted_list[i] > sorted_list[i + 1]:
+                # Échange des éléments
+                sorted_list[i], sorted_list[i + 1] = sorted_list[i + 1], sorted_list[i]
+                swapped = True  # Indique qu'un échange a eu lieu
+                total_moves += 1  # Incrémente le nombre total de coups
+    
+    # Affichage du nombre total de coups nécessaires
+    print(f"Nombre total de coups nécessaires pour trier la liste : {total_moves}")
+    
+    # Retourne la liste triée et le nombre total de coups
+    return sorted_list, total_moves
+
+# Exemple d'utilisation
+ma_liste = [4, 2, 7, 1, 9, 3]
+liste_triee, coups_necessaires = my_sort(ma_liste)
+
+# Affichage des résultats
+print("Liste triée :", liste_triee)

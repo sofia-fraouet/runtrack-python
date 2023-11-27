@@ -1,0 +1,11 @@
+def afficher_rectangle(width, height):
+    for i in range(height):
+        if i == 0 or i == height - 1:
+            # Première et dernière ligne : affiche des '-' sur toute la largeur
+            print('-' * width)
+        else:
+            # Lignes intermédiaires : affiche '|' aux extrémités et des espaces au milieu
+            print('|' + ' ' * (width - 2) + '|')
+
+# Exemple d'utilisation avec un rectangle de largeur 8 et hauteur 5
+afficher_rectangle(8, 5)

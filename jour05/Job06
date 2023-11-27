@@ -1,0 +1,13 @@
+def distance_to_toilettes_par_semaine(nombre_marches, hauteur_marche):
+    marches_par_jour = 2 * (nombre_marches * hauteur_marche)  # Aller et retour
+    distance_par_jour_cm = marches_par_jour * 5  # 5 allers-retours par jour
+    distance_par_semaine_cm = distance_par_jour_cm * 7  # 7 jours par semaine
+    distance_par_semaine_m = distance_par_semaine_cm / 100  # Convertir en mètres
+
+    return distance_par_semaine_m
+
+# Exemple d'utilisation
+nombre_marches = 10
+hauteur_marche = 20
+resultat = distance_to_toilettes_par_semaine(nombre_marches, hauteur_marche)
+print(f"Pour {nombre_marches} marches de {hauteur_marche} cm, le gardien parcourt {resultat:.2f} m par semaine.")

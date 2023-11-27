@@ -1,0 +1,19 @@
+def arrondir_notes(notes):
+    notes_arrondies = []
+    for note in notes:
+        if note < 40:
+            notes_arrondies.append(note)  # Les notes en dessous de 40 restent inchangées
+        else:
+            # Calculer le prochain multiple de 5 supérieur ou égal à la note
+            multiple_de_5_sup = ((note + 4) // 5) * 5
+            # Arrondir seulement si la différence est strictement inférieure à 3
+            if multiple_de_5_sup - note < 3:
+                notes_arrondies.append(multiple_de_5_sup)
+            else:
+                notes_arrondies.append(note)  # Sinon, la note reste inchangée
+    return notes_arrondies
+
+# Exemple d'utilisation
+liste_notes = [83, 82, 45, 37, 91]
+resultat = arrondir_notes(liste_notes)
+print("Liste des notes arrondies :", resultat)

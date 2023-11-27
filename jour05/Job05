@@ -1,0 +1,28 @@
+def chiffrement_cesar(message, decalage):
+    message_chiffre = ""
+
+    for lettre in message:
+        if lettre.isalpha():  # Vérifier si le caractère est une lettre
+            minuscule = lettre.islower()  # Vérifier si la lettre est minuscule
+            lettre = lettre.lower()  # Convertir la lettre en minuscule pour le traitement
+
+            # Appliquer le décalage
+            lettre_chiffree = chr((ord(lettre) - ord('a') + decalage) % 26 + ord('a'))
+
+            # Reconvertir en majuscule si la lettre d'origine était en majuscule
+            if not minuscule:
+                lettre_chiffree = lettre_chiffree.upper()
+
+            message_chiffre += lettre_chiffree
+        else:
+            # Si le caractère n'est pas une lettre, le laisser tel quel
+            message_chiffre += lettre
+
+    return message_chiffre
+
+# Exemple d'utilisation
+message_original = "Hello, Caesar!"
+decalage = 3
+message_chiffre = chiffrement_cesar(message_original, decalage)
+print("Message original:", message_original)
+print("Message chiffré:", message_chiffre)

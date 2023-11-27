@@ -1,0 +1,18 @@
+def afficher_triangle(hauteur):
+    for i in range(hauteur):
+        # Afficher des espaces pour aligner le triangle
+        print(' ' * (hauteur - i - 1), end='')
+        
+        # Afficher des caractères spécifiques pour former le triangle
+        if i == 0:
+            print('_')
+        elif i == hauteur - 1:
+            print('/' + '_' * (2 * i) + '\\')
+        else:
+            print('/' + ' ' * (2 * i) + '\\')
+
+# Demander à l'utilisateur la hauteur du triangle
+hauteur = int(input("Entrez la hauteur du triangle : "))
+
+# Appeler la fonction pour afficher le triangle
+afficher_triangle(hauteur)
